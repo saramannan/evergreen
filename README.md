@@ -1,6 +1,6 @@
 # Enrichment Center
 
-This project was exported from Replit and converted into a standard local Vite + React + TypeScript app.
+This project is a standard local Vite + React + TypeScript app.
 
 ## Local setup
 
