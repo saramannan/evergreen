@@ -10,7 +10,11 @@ function getBasePath() {
 
   if (process.env.GITHUB_PAGES === "true") {
     const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1];
-    return repoName ? `/${repoName}/` : "/";
+    if (!repoName || repoName.endsWith(".github.io")) {
+      return "/";
+    }
+
+    return `/${repoName}/`;
   }
 
   return "/";

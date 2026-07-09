@@ -5,6 +5,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
+const bookCircleImage = `${import.meta.env.BASE_URL}images/book-circle.png`;
+const gentleYogaImage = `${import.meta.env.BASE_URL}images/gentle-yoga.png`;
+const intergenerationalImage = `${import.meta.env.BASE_URL}images/intergenerational.png`;
+
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
@@ -60,7 +64,7 @@ export default function Home() {
             className="relative h-[380px] md:h-[500px] rounded-t-full rounded-b-3xl overflow-hidden shadow-2xl border-8 border-white"
           >
             <img 
-              src="/images/book-circle.png" 
+              src={bookCircleImage}
               alt="Elders sharing a book" 
               className="w-full h-full object-cover"
             />
@@ -78,7 +82,7 @@ export default function Home() {
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}
             className="relative h-[600px] rounded-3xl overflow-hidden shadow-xl"
           >
-            <img src="/images/gentle-yoga.png" alt="Warm lit room" className="w-full h-full object-cover" />
+            <img src={gentleYogaImage} alt="Warm lit room" className="w-full h-full object-cover" />
           </motion.div>
           <motion.div 
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
@@ -157,7 +161,7 @@ export default function Home() {
           </div>
           <div className="md:w-1/2 relative">
             <div className="aspect-square rounded-full bg-secondary/20 absolute -inset-8 blur-3xl" />
-            <img src="/images/intergenerational.png" alt="Family" className="relative z-10 rounded-[3rem] shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500" />
+            <img src={intergenerationalImage} alt="Family" className="relative z-10 rounded-[3rem] shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500" />
           </div>
         </div>
       </section>
